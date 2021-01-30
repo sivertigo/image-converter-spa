@@ -30,6 +30,10 @@ npm run lint
 
 - [vee-validate](https://logaretm.github.io/vee-validate/)
 
+### ユニットテスト
+
+- [Jest](https://cli.vuejs.org/core-plugins/unit-jest.html#injected-commands)
+
 ### UI コンポーネント
 
 - [Vuetify](https://vuetifyjs.com/ja/)
