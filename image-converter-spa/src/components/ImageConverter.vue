@@ -28,12 +28,9 @@
                 <div class="img-box">
                   <img class="img-show" :src="image" />
                 </div>
+                <v-divider></v-divider>
               </v-card-text>
-              <v-radio-group row v-model="radioGroup">
-                <v-radio label="サイズ圧縮" value="resize"
-                  >サイズを圧縮</v-radio
-                >
-              </v-radio-group>
+
               <v-card-actions class="justify-end">
                 <v-btn text @click="dialog.value = false">Close</v-btn>
                 <v-btn text pr-1 @click="onClickConvert">変換！</v-btn>
@@ -52,7 +49,6 @@
     props: {
       msg: String,
       value: String,
-      dialog: Boolean,
     },
 
     data: function() {
@@ -60,6 +56,7 @@
         isDragOver: false,
         image: null,
         resize: null,
+        dialog: false,
       };
     },
 
