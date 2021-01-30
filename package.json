@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "aws-amplify": "^3.3.15",
     "aws-sdk": "^2.834.0",
     "core-js": "^3.6.5",
     "dotenv": "^8.2.0",
