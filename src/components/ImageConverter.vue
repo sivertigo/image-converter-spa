@@ -11,7 +11,7 @@
           @dragleave="onDragFile('leave')"
           @drop.stop="onDropFile"
         >
-          画像をドロップしてください。
+          画像をドロップしてください
           <input type="file" title @change="onChangeInput" />
         </div>
         <div class="image-show-area"></div>
