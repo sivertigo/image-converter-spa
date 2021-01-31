@@ -31,6 +31,7 @@ npm run lint
 ### Utility
 
 - [vee-validate](https://logaretm.github.io/vee-validate/)
+- [Lodash](https://lodash.com/)
 
 ### UnitTest
 
