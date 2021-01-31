@@ -38,6 +38,10 @@ npm run lint
 
 - [Vuetify](https://vuetifyjs.com/ja/)
 
+### DataStore
+
+- Graphql
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
