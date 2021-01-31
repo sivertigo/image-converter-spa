@@ -19,19 +19,25 @@
       return {
         signedIn: false,
         authConfig: {
+          defaultCountryCode: "81",
+
+          signInConfig: {
+            header: "サインイン",
+          },
           signUpConfig: {
+            header: "ユーザー登録",
             hideAllDefaults: true,
-            defaultCountryCode: "1",
+            defaultCountryCode: "81",
             signUpFields: [
               {
-                label: "Username",
+                label: "メールアドレス",
                 key: "username",
                 required: true,
                 displayOrder: 1,
-                type: "string",
+                type: "email",
               },
               {
-                label: "Password",
+                label: "パスワード",
                 key: "password",
                 required: true,
                 displayOrder: 2,
@@ -44,13 +50,10 @@
     },
     async beforeCreate() {
       try {
-        console.log("before create try");
-
         await Auth.currentAuthenticatedUser();
         this.signedIn = true;
       } catch (err) {
         this.signedIn = false;
-        console.log("not signed in");
       }
       AmplifyEventBus.$on("authState", (info) => {
         if (info === "signedIn") {

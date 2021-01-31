@@ -39,7 +39,6 @@ AmplifyEventBus.$on('authState', async (state) => {
   if (state === 'signedOut'){
     user = null
     store.commit('setUser', null)
-
     router.push({path: '/signin'}, () => {})
   } else if (state === 'signedIn') {
     user = await getUser();
@@ -55,10 +54,13 @@ const routes = [
     meta: { requireAuth: true }
 
   },
+
   {
-    path: '/note',
+    path: '/memo',
     name: 'PrivateNote',
-    component: PrivateNote
+    component: PrivateNote,
+    meta: { requireAuth: true }
+
   },
   {
     path: '/signin',
@@ -70,5 +72,18 @@ const routes = [
 const router = new VueRouter({
   routes
 })
+router.beforeResolve(async (to, from, next) => {
+  if (to.matched.some(record => record.meta.requireAuth)) {
+    user = await getUser()
+    if (!user) {
+      return next({
+        path: '/signin'
+      })
+    }
+    return next()
+  }
+  return next()
+})
+
 
 export default router

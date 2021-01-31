@@ -17,6 +17,8 @@
       </div>
       <v-spacer></v-spacer>
       <router-link class="white--text" to="/signin">signin</router-link>
+      <div>/</div>
+      <router-link class="white--text" to="/memo">memo</router-link>
 
       <v-btn href="https://qiita.com/sivertigo" target="_blank" text>
         <v-icon>mdi-open-in-new</v-icon>
