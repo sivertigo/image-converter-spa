@@ -21,8 +21,9 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-
     <v-main>
+      <v-btn @click="onClick()">Click Me</v-btn>
+
       <ImageConverter />
     </v-main>
   </v-app>
@@ -30,6 +31,7 @@
 
 <script>
   import ImageConverter from "./components/ImageConverter.vue";
+  import { API } from "aws-amplify";
 
   export default {
     name: "App",
@@ -37,7 +39,33 @@
     components: {
       ImageConverter,
     },
-
+    methods: {
+      onClick() {
+        console.log("a");
+        // 検索ID指定
+        const path = this.path + "/" + this.text;
+        // オプション
+        const myInit = {
+          headers: {},
+          response: true,
+        };
+        this.apiName = "api2a30ef51";
+        API.get(this.apiName, path, myInit)
+          .then((response) => {
+            // テーブル表示
+            this.items = [
+              {
+                id: response.data[0].id,
+                name: response.data[0].name,
+              },
+            ];
+          })
+          .catch(() => {
+            // テーブルリセット
+            this.items = [];
+          });
+      },
+    },
     data: () => ({
       //
     }),
