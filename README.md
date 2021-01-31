@@ -28,6 +28,10 @@ npm run lint
 ### Deployment
 - deploy by Amplify
 
+### Routing
+
+- [Vue-router](https://router.vuejs.org/)
+
 ### Utility
 
 - [vee-validate](https://logaretm.github.io/vee-validate/)
