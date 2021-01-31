@@ -10,6 +10,12 @@
       "StackName": "amplify-imageconverter-prd-210725",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:376962297283:stack/amplify-imageconverter-prd-210725/b959fef0-62f3-11eb-8ca0-0e38d71f511f",
       "AmplifyAppId": "dg9h83ymt9n8p"
+    },
+    "categories": {
+      "auth": {
+        "cognito53a8ce80": {},
+        "imageconverter": {}
+      }
     }
   }
 }
