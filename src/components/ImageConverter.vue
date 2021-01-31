@@ -128,7 +128,7 @@
   }
   .img-box {
     position: relative;
-    margin: 4em auto;
+    margin: 0 auto;
     width: 800px;
     height: 800px;
     max-width: 100%;
