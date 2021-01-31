@@ -24,17 +24,19 @@ npm run build
 npm run lint
 ```
 
-## 利用コンポーネント
+## Using Components
+### Deployment
+- deploy by Amplify
 
-### ロジックコンポーネント
+### Utility
 
 - [vee-validate](https://logaretm.github.io/vee-validate/)
 
-### ユニットテスト
+### UnitTest
 
 - [Jest](https://cli.vuejs.org/core-plugins/unit-jest.html#injected-commands)
 
-### UI コンポーネント
+### UI Components
 
 - [Vuetify](https://vuetifyjs.com/ja/)
 
