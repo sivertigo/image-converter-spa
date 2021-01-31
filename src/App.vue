@@ -11,9 +11,10 @@
           width="40"
         />
 
-        <h2>画像変換さん</h2>
+        <router-link class="white--text" to="/"
+          ><h2>画像変換さん</h2></router-link
+        >
       </div>
-
       <v-spacer></v-spacer>
 
       <v-btn href="https://qiita.com/sivertigo" target="_blank" text>
@@ -22,23 +23,20 @@
       </v-btn>
     </v-app-bar>
     <v-main>
-      <v-btn @click="onClick()">Click Me</v-btn>
+      <router-view />
 
-      <ImageConverter />
+      <v-btn @click="onClick()">Click Me</v-btn>
     </v-main>
   </v-app>
 </template>
 
 <script>
-  import ImageConverter from "./components/ImageConverter.vue";
   import { API } from "aws-amplify";
 
   export default {
     name: "App",
 
-    components: {
-      ImageConverter,
-    },
+    components: {},
     methods: {
       onClick() {
         console.log("a");
